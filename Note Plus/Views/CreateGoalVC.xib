@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateGoalVC" customModule="Note_Plus" customModuleProvider="target">
+            <connections>
+                <outlet property="goalTextView" destination="ICs-D2-zgi" id="7ok-sX-KAW"/>
+                <outlet property="longTermBtn" destination="CbP-DK-bav" id="ab3-3v-UwB"/>
+                <outlet property="nextBtn" destination="7Fr-xd-tFq" id="0ve-tp-WQa"/>
+                <outlet property="shortTermBtn" destination="QvC-c3-nz9" id="7Ny-aU-7xW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qon-Q6-u1L">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFd-OG-nhW">
+                    <rect key="frame" x="30" y="40" width="260" height="320"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUP-bY-4fh">
+                            <rect key="frame" x="227" y="8" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="8ku-Zp-yN1"/>
+                                <constraint firstAttribute="width" constant="25" id="XR5-CD-tgk"/>
+                            </constraints>
+                            <state key="normal" image="closeButton"/>
+                            <connections>
+                                <action selector="closeBtnWasPressed:" destination="-1" eventType="touchUpInside" id="De1-gp-sKc"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What is your goal?" translatesAutoresizingMaskIntoConstraints="NO" id="ICs-D2-zgi">
+                            <rect key="frame" x="14" y="82" width="232" height="95"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="95" id="2ks-Cy-ZJq"/>
+                            </constraints>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select one:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iF7-Bu-8o2">
+                            <rect key="frame" x="14" y="187" width="63" height="15.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QMk-R3-uPs">
+                            <rect key="frame" x="26" y="214.5" width="208" height="29"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvC-c3-nz9" customClass="RoundedButton" customModule="Note_Plus" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="29"/>
+                                    <color key="backgroundColor" red="0.089264936745166779" green="0.68867111206054688" blue="0.25166481733322144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="Bud-D8-35w"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                    <state key="normal" title="SHORT TERM">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="shortTermBtnWasPressed:" destination="-1" eventType="touchUpInside" id="eF1-Eg-5gz"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbP-DK-bav" customClass="RoundedButton" customModule="Note_Plus" customModuleProvider="target">
+                                    <rect key="frame" x="108" y="0.0" width="100" height="29"/>
+                                    <color key="backgroundColor" red="0.089264936745166779" green="0.68867111206054688" blue="0.25166481733322144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                    <state key="normal" title="LONG TERM">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="longtermBtnWasPressed:" destination="-1" eventType="touchUpInside" id="ILe-yf-lXH"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMz-nX-gW8">
+                            <rect key="frame" x="82.5" y="25" width="95.5" height="19"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fr-xd-tFq">
+                            <rect key="frame" x="0.0" y="285" width="260" height="35"/>
+                            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="gaz-kD-SL7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="NEXT">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="nextBtnWasPressed:" destination="-1" eventType="touchUpInside" id="LGi-jt-AAq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="QMk-R3-uPs" firstAttribute="centerX" secondItem="vFd-OG-nhW" secondAttribute="centerX" id="0R1-Xt-i6i"/>
+                        <constraint firstItem="iF7-Bu-8o2" firstAttribute="top" secondItem="ICs-D2-zgi" secondAttribute="bottom" constant="10" id="3Oq-8I-Oj1"/>
+                        <constraint firstItem="oMz-nX-gW8" firstAttribute="centerX" secondItem="vFd-OG-nhW" secondAttribute="centerX" id="JS9-8A-nuH"/>
+                        <constraint firstItem="7Fr-xd-tFq" firstAttribute="leading" secondItem="vFd-OG-nhW" secondAttribute="leading" id="Vur-XQ-yd4"/>
+                        <constraint firstItem="oMz-nX-gW8" firstAttribute="top" secondItem="vFd-OG-nhW" secondAttribute="top" constant="25" id="eWW-mU-zrk"/>
+                        <constraint firstItem="EUP-bY-4fh" firstAttribute="top" secondItem="vFd-OG-nhW" secondAttribute="top" constant="8" id="f8F-Ep-Tbw"/>
+                        <constraint firstAttribute="trailing" secondItem="7Fr-xd-tFq" secondAttribute="trailing" id="ikr-hv-MXk"/>
+                        <constraint firstItem="ICs-D2-zgi" firstAttribute="leading" secondItem="vFd-OG-nhW" secondAttribute="leading" constant="14" id="kHa-m6-rqs"/>
+                        <constraint firstAttribute="trailing" secondItem="ICs-D2-zgi" secondAttribute="trailing" constant="14" id="lWu-Xj-vR9"/>
+                        <constraint firstItem="iF7-Bu-8o2" firstAttribute="leading" secondItem="vFd-OG-nhW" secondAttribute="leading" constant="14" id="ldI-d7-Got"/>
+                        <constraint firstItem="ICs-D2-zgi" firstAttribute="top" secondItem="oMz-nX-gW8" secondAttribute="bottom" constant="38" id="ofw-ve-Tyd"/>
+                        <constraint firstAttribute="bottom" secondItem="7Fr-xd-tFq" secondAttribute="bottom" id="qAt-DZ-iqq"/>
+                        <constraint firstAttribute="height" constant="320" id="rjZ-0T-bM0"/>
+                        <constraint firstItem="QMk-R3-uPs" firstAttribute="top" secondItem="iF7-Bu-8o2" secondAttribute="bottom" constant="12" id="v3r-O6-v86"/>
+                        <constraint firstAttribute="trailing" secondItem="EUP-bY-4fh" secondAttribute="trailing" constant="8" id="xlN-qK-lce"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Qon-Q6-u1L" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9kq-8S-Xoj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vFd-OG-nhW" secondAttribute="trailing" constant="30" id="BDY-do-5Ww"/>
+                <constraint firstItem="vFd-OG-nhW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="FCj-ew-GKQ"/>
+                <constraint firstItem="Qon-Q6-u1L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="J0y-oA-fZa"/>
+                <constraint firstItem="Qon-Q6-u1L" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="MKK-fU-skd"/>
+                <constraint firstItem="Qon-Q6-u1L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WrS-5P-REX"/>
+                <constraint firstItem="vFd-OG-nhW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="qpy-gO-VCt"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.25" y="113.02816901408451"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="28" height="28"/>
+    </resources>
+</document>
